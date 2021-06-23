@@ -1,10 +1,10 @@
 import {useEffect, useState} from "react";
 import './Users.css'
+
 export default function Users() {
 
 
-
-   let state = useState([]);
+    let state = useState([]);
     let usersList = state[0];
     let setUsersList = state[1];
 
@@ -23,14 +23,14 @@ export default function Users() {
     return (
         <div>
             {
-        usersList.map(value => <div className={'comment'}>
-            <h1>{value.name}</h1>
-            <h2>{value.id}</h2>
-            <h2>{value.email}</h2>
-            <p>{value.body}</p>
-            <hr/>
-
-        </div>)
+                usersList.map(value =>
+                    <div className={'comment'}>
+                        <h1>{value.name}</h1>
+                        <h2>{value.id}</h2>
+                        <h2>{value.email}</h2>
+                        <p>{value.body}</p>
+                        <hr/>
+                    </div>)
             }
         </div>
     );
